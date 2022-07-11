@@ -1,9 +1,11 @@
-syntax on
+syntax on                                                                             
 set number
 set ai
 set ruler
 set tabstop=4 expandtab softtabstop=4 textwidth=79 shiftwidth=4
 set hlsearch
+set nocompatible
+filetype plugin on
 set fileformat=unix
 set cursorcolumn
 set showmatch
@@ -12,7 +14,7 @@ set autoindent
 set background=dark 
 set nowrap
 set relativenumber
-hi CursorColumn ctermbg=016                                                                                                                                    
+hi CursorColumn ctermbg=016                                                           
 set showcmd
 set scrolloff=8
  
@@ -21,6 +23,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'gruvbox-community/gruvbox'
+Plug 'neoclide/coc.nvim',{'branch':'release'}
+Plug 'vimwiki/vimwiki'
 call plug#end()
  
 autocmd vimenter * ++nested colorscheme gruvbox
@@ -30,3 +34,5 @@ nnoremap <leader>pv : Vex<CR>
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap<C-p> :GFiles<CR>
 nnoremap<leader>pf :Files<CR>
+
+
